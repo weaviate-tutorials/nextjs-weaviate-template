@@ -5,7 +5,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse,
 ) {
-    const collectionName = "Jeopardy"
+    const collectionName = "JeopardyTEST"
 
     const jeopardy = client.collections.get(collectionName)
     const searchTerm = req.query.query

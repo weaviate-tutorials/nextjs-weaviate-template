@@ -5,12 +5,13 @@ import InputCover from '@/components/InputCover'
 import Cover from '@/components/Cover'
 import Header from "@/components/Header"
 import Loading from '@/components/Loading'
+import { WeaviateReturn } from "weaviate-client";
 
 export default function Page() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [search, setSearch] = useState(false);
-  const [searchResponse, setSearchResponse] = useState(null)
+  const [searchResponse, setSearchResponse] = useState<WeaviateReturn<undefined> | null>(null)
   const [isLoading, setLoading] = useState(false)
 
   function handleSubmit() {
@@ -52,8 +53,8 @@ export default function Page() {
         {
           search && searchResponse &&
           <div>
-            <p>{searchResponse.objects[0].properties.answer}</p>
-            <p>{searchResponse.objects[0].properties.question}</p>
+            <p>{searchResponse.objects[0].properties.answer?.toString()}</p>
+            <p>{searchResponse.objects[0].properties.question?.toString()}</p>
           </div>
 
         }
@@ -67,6 +68,3 @@ export default function Page() {
     </main>
   )
 }
-
-// add typing, 
-// add tailwind to 

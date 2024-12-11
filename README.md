@@ -1,41 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+### From Zero to RAG: Practical Vector Search with Weaviate and TypeScript
 
-## Getting Started
+This hands-on workshop aims to fix that as we walk through what it takes to build a privacy-focused AI Web App, covering concepts like vector search and RAG. You'll learn to work with LLMs, embedding models, and vector databases, leaving with both the confidence and practical skills to integrate AI into your JavaScript applications.
 
-First, run the development server:
+## Installation 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repo with the following command
+    ```
+    git clone https://github.com/weaviate-tutorials/nextjs-weaviate-template
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the necessary project dependencies with the following command
+    ```
+    yarn install
+    ```
+3. Follow along workshop 😉
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-
+## 📚 Resources
+Learn more about Weaviate applications
+- [Weaviate Generative Search](https://weaviate.io/developers/weaviate/modules/reader-generator-modules/generative-openai)
+- [Vector Search](https://weaviate.io/developers/weaviate/search/similarity)
+  
+## 🤷🏾‍♂️ Troubleshooting
+- Check out the [Weaviate Docs](https://weaviate.io/developers/weaviate)
+- Open an [Issue](https://github.com/malgamves/vue-vector-search-demo/issues/new)
+   

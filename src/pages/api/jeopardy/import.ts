@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { join } from 'path'
 import { readFileSync } from 'fs'
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export default async function handler(
   req: NextApiRequest,

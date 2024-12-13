@@ -1,7 +1,5 @@
 import weaviate,  { WeaviateClient } from 'weaviate-client'
 
-export const runtime = "edge";
-
 const weaviateURL = process.env.WEAVIATE_URL as string;
 const weaviateApiKey = process.env.WEAVIATE_API_KEY as string;
 const cohereApiKey = process.env.COHERE_API_KEY as string;

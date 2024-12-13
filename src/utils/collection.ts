@@ -1,10 +1,10 @@
+import weaviate from 'weaviate-client'
 import client from "@/utils/weaviate"
-import { generative, vectorizer } from "weaviate-client";
 
 export default async function createCollection(collectionName: string) {
     await client.collections.create({
       name: collectionName,
-      vectorizers: vectorizer.text2VecOpenAI(),
-      generative: generative.openAI(),
+      vectorizers: weaviate.configure.vectorizer.text2VecOpenAI(),
+      generative: weaviate.configure.generative.openAI(),
     });
   }

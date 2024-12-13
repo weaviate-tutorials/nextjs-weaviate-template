@@ -1,8 +1,8 @@
 import client from "@/utils/weaviate";
+import createCollection from "@/utils/collection"
 import type { NextApiRequest, NextApiResponse } from "next";
 import { join } from 'path'
 import { readFileSync } from 'fs'
-import { generative, vectorizer } from "weaviate-client";
 
 export const runtime = "edge";
 
@@ -33,13 +33,7 @@ function getData(fileName: string) {
   return jsonData
 }
 
-async function createCollection(collectionName: string) {
-  await client.collections.create({
-    name: collectionName,
-    vectorizers: vectorizer.text2VecOpenAI(),
-    generative: generative.openAI(),
-  });
-}
+
 
 
 

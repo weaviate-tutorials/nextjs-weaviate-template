@@ -4,6 +4,7 @@ import { join } from 'path'
 import { readFileSync } from 'fs'
 import { generative, vectorizer } from "weaviate-client";
 
+export const runtime = "edge";
 
 export default async function handler(
   req: NextApiRequest,

@@ -53,13 +53,18 @@ export default function Page() {
         {
           search && searchResponse &&
           <div>
-            <p>{searchResponse.objects[0].properties.answer?.toString()}</p>
             <p>{searchResponse.objects[0].properties.question?.toString()}</p>
+            <p>{searchResponse.objects[0].properties.answer?.toString()}</p>
           </div>
 
         }
+
         {/* {search && searchResponse &&
                <VectorSearchResult response={searchResponse} />
+            } */}
+
+            {/* {search && searchResponse &&
+               <RAGResult response={searchResponse} />
             } */}
         {isLoading &&
                 <Loading />

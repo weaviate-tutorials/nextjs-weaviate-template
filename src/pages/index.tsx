@@ -59,7 +59,7 @@ export default function Page() {
 
         }
 
-        {/* {search && searchResponse &&
+           {/* {search && searchResponse &&
                <VectorSearchResult response={searchResponse} />
             } */}
 

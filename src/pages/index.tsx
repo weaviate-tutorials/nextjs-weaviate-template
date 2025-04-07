@@ -6,12 +6,14 @@ import Cover from '@/components/Cover'
 import Header from "@/components/Header"
 import Loading from '@/components/Loading'
 import { WeaviateReturn } from "weaviate-client";
+// import  SearchResult from "@/components/SearchResult";
+import { Jeopardy } from "../../types";
 
 export default function Page() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [search, setSearch] = useState(false);
-  const [searchResponse, setSearchResponse] = useState<WeaviateReturn<undefined> | null>(null)
+  const [searchResponse, setSearchResponse] = useState<WeaviateReturn<Jeopardy> | null>(null)
   const [isLoading, setLoading] = useState(false)
 
   function handleSubmit() {
@@ -56,11 +58,10 @@ export default function Page() {
             <p>{searchResponse.objects[0].properties.question?.toString()}</p>
             <p>{searchResponse.objects[0].properties.answer?.toString()}</p>
           </div>
-
         }
 
            {/* {search && searchResponse &&
-               <VectorSearchResult response={searchResponse} />
+               <SearchResult response={searchResponse} />
             } */}
 
             {/* {search && searchResponse &&

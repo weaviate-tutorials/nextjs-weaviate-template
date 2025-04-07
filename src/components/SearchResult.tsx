@@ -2,10 +2,10 @@
 
 import React from "react";
 import { type WeaviateReturn } from "weaviate-client";
-import { Wiki } from "@/types";
+import { type Jeopardy } from "../../types";
 
 export default function VectorSearchResult({ response }: {
-    response: WeaviateReturn<Wiki>
+    response: WeaviateReturn<Jeopardy>
 }) {
 
     return (
@@ -15,7 +15,7 @@ export default function VectorSearchResult({ response }: {
                 role="menu">
                 <div className="p-2">
                     <strong className="block p-2 text-xs font-bold uppercase text-black">
-                        results
+                        Results
                     </strong>
                     <div>
                     </div>
@@ -23,11 +23,11 @@ export default function VectorSearchResult({ response }: {
                         {
                             response.objects.map((result) => (
                                 <div key={result.uuid} className="space-y-4 p-2">
-                                    <a className="font-bold text-xl pt-2 pb-2 underline" href={result.properties.url}>
-                                        {result.properties.title}
+                                    <a className="font-bold text-xl pt-2 pb-2 underline">
+                                        {result.properties.question}
                                     </a>
                                     <h3 className="-translate-y-2 w-full">
-                                        {result.properties.text}
+                                        {result.properties.answer}
                                     </h3>
                                 </div>
                             ))

@@ -7,7 +7,7 @@ export default async function handler(
 ) {
     const collectionName = "JeopardyTEST"
 
-    const jeopardy = client.collections.get(collectionName)
+    const jeopardy = client.collections.use(collectionName)
     const searchTerm = req.query.query
 
     if (searchTerm) {

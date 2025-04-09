@@ -17,7 +17,7 @@ export default async function handler(
     await createCollection(collectionName)
   }
 
-  const myCollection = client.collections.get(collectionName)
+  const myCollection = client.collections.use(collectionName)
   const response = await myCollection.data.insertMany(importJson)
 
   res.status(200).json(response);

@@ -12,8 +12,7 @@
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "react-markdown": "^10.0.0",
-    "weaviate-client": "^3.2.2"
+    "weaviate-client": "^3.5.1"
   },
   "devDependencies": {
     "@types/node": "^20",
